@@ -1,0 +1,570 @@
+html {
+	background: #D93D61;
+
+}
+
+body {
+	background: #FFFFFF;
+	font-family: "Montserrat",sans-serif;
+	font-size: 1.6rem;
+	  line-height: 2.4rem;
+	  color: #4D1522;
+	overflow-x: hidden;
+
+}
+
+body.pinkified {
+  background: #D93D61;
+  color: #FFFFFF;
+}
+
+header, main {
+  padding: 2rem 3rem;
+}
+
+main {
+  padding-bottom: 6rem;
+}
+
+/*Webkit om de scrollbar een andere kleur te geven*/
+::-webkit-scrollbar {
+	width: 1.5rem;
+}
+
+::-webkit-scrollbar-track {
+	background: #FFF;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #8D2840;
+	border-radius: 1rem;
+	width: 80%;
+}
+
+.logo {
+  margin-bottom: 3rem;
+}
+
+.menu {
+	position: fixed;
+	top: 4rem;
+	right: 3rem;
+	z-index: 9999;
+}
+
+
+.verborgen {
+	display: none !important;
+}
+
+.tabbladen {
+	margin-top: 2rem;
+}
+
+.tabbladen li {
+	display: block;
+	margin-bottom: 2rem;
+}
+
+.tabbladen li a {
+	color: #8D2840;
+	display: inline-block;
+	padding: 1rem 2rem;
+	text-decoration: none;
+}
+
+.pinkified .tabbladen li a {
+	color: #FFFFFF;
+}
+
+.tabbladen li a.actief {
+	background: #8D2840;
+	color: white;
+}
+
+nav a {
+	margin-bottom: 1rem;
+	text-decoration: none;
+	color: #4D1522;
+}
+
+.pinkified nav a {
+  color: #FFFFFF;
+}
+
+nav a:hover {
+	color: #8D2840;
+}
+
+nav a.actief {
+  font-weight: 700;
+  color: #8D2840;
+}
+
+.pinkified nav a.actief {
+  color: #FFFFFF;
+}
+
+nav {
+	display: none;
+	flex-direction: column;
+	font-weight: 400;
+	font-size: 2rem;
+}
+
+@media (max-width: 800px) {
+	nav {
+		height: 100vh;
+		background: #DF8197;
+		text-align: center;
+		text-transform: uppercase;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+		z-index: 9998;
+	}
+
+	nav a {
+		color: #4D1522 !important;
+		margin-bottom: 5rem;
+		position: relative;
+	}
+
+	nav a.actief:before {
+		content: "";
+		background: #8D2840;
+		position: absolute;
+		bottom: -1.5rem;
+		left: -25%;
+		height: 0.5rem;
+		width: 150%;
+		border-radius: 1.5rem;
+		animation-name: tonen;
+		animation-duration: 1s;
+		transform: scaleX(0);
+		transform-origin: top left;
+		animation-fill-mode: forwards;
+	}
+}
+
+@keyframes tonen {
+	100% {
+		transform: scaleX(1);
+	}
+}
+
+.intro, .profiel {
+  padding: 6rem 0 9rem;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.profiel {
+	max-width: 100rem;
+}
+
+.profiel .links {
+	text-align: center;
+	margin-bottom: 6rem;
+}
+
+.profiel img {
+	width: 80%;
+	display: inline-block;
+	height: auto;
+	border-radius: 100%;
+}
+
+.intro h1, .profiel h1 {
+  font-size: 4rem;
+  line-height: 4rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  color: #8D2840;
+}
+
+.pinkified .intro h1, .pinkified .profiel h1 {
+  color: #FFFFFF;
+}
+
+.kolomweergave {
+	column-count: 1;
+}
+
+.kolomweergave a {
+	display: block;
+	margin-bottom: 4rem;
+	break-inside: avoid;
+	text-decoration: none;
+	color: #8D2840;
+  position: relative;
+}
+
+.kolomweergave a .beschrijving {
+  display: none;
+}
+
+.kolomweergave a .beschrijving h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #8D2840;
+  color: #D93D61;
+}
+
+.kolomweergave a .beschrijving p {
+  color: #4D1522;
+}
+
+.kolomweergave a:hover .beschrijving {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: black;
+  background: rgba(255,255,255,0.8);
+  text-align: center;
+  z-index: 2;
+}
+
+.kolomweergave a:hover img {
+  z-index: 1;
+}
+
+.profiel p {
+	margin-bottom: 2rem;
+}
+
+.profiel ul {
+	margin: 2rem 0;
+}
+
+.profiel ul li {
+	position: relative;
+	padding-left: 4rem;
+}
+
+.profiel ul li i {
+	position: absolute;
+	left: 0;
+	color: #8D2840;
+}
+
+.pinkified .profiel ul li i {
+	color: #FFFFFF;
+}
+
+.pinkified .kolomweergave a {
+  color: #FFFFFF;
+}
+
+.kolomweergave img {
+	width: 100%;
+	display: block;
+	margin-bottom: 1rem;
+}
+
+footer {
+  padding: 6rem 3rem;
+  background: #D93D61;
+  color: #FFFFFF;
+}
+
+footer a {
+  color: #FFFFFF;
+  text-decoration: none;
+  display: block;
+}
+
+footer .links {
+  padding-bottom: 3rem;
+}
+
+footer .rechts span {
+  vertical-align: middle;
+}
+
+.schakelaar {
+  margin-top: -0.5rem;
+  margin-left: 1rem;
+  width: 5rem;
+  height: 2.5rem;
+  background: #8D2840;
+  border-radius: 2rem;
+  display: inline-block;
+  cursor: pointer;
+  text-align: left;
+}
+
+.schakelaar.aan {
+  text-align: right;
+}
+
+.schakelaar .knopje {
+  margin: .25rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  background: #FFFFFF;
+  display: inline-block;
+}
+
+form {
+	margin-top: 3rem;
+}
+
+form label {
+	display: block;
+	margin-bottom: 2rem;
+}
+
+form input {
+	padding: 0 0.5rem;
+}
+
+form input, .verzendknop {
+	line-height: 4rem;
+	font-family: "Montserrat",sans-serif;
+}
+
+form input, form textarea {
+	display: block;
+	width: 100%;
+	border: 0.1rem solid #4D1522;
+}
+
+form input:focus, form textarea:focus {
+	background: #D93D61;
+	background: #f2bbc8;
+	outline: none;
+}
+
+form textarea {
+	height: 10rem;
+	font-family: "Montserrat",sans-serif;
+	padding: 1rem 0.5rem;
+}
+
+.verzendknop {
+	display: inline-block;
+	height: 4rem;
+	outline: none;
+	border: none;
+	background:  #8D2840;
+	width: auto;
+	padding: 0 3rem;
+	font-size: 1.6rem;
+	color: #fFFFFF;
+	cursor: pointer;
+	border-bottom: 0.3rem solid #4D1522;
+}
+
+.verzendknop:hover {
+	border: 0;
+}
+
+.resultaat {
+	margin-top: 4rem;
+	border: 0.1rem solid #4D1522;
+	padding: 3rem;
+	font-size: 2rem;
+}
+
+.pinkified .resultaat {
+	border-color: #FFFFFF;
+}
+
+.dansen {
+	position: absolute;
+	right: 0;
+	top: 12rem;
+	background: #8D2840;
+	line-height: 5rem;
+	z-index: 9997;
+	width: 20rem;
+	border-top-left-radius: 2rem;
+	border-bottom-left-radius: 2rem;
+	padding-left: 5rem;
+	margin-right: -15rem;
+	transition: 1s all ease-in-out;
+	cursor: pointer;
+	color: #FFF;
+	font-weight: 700;
+}
+
+.dansen:hover {
+	margin-right: 0;
+}
+
+.dansen i {
+	position: absolute;
+	left: 1.5rem;
+	line-height: 5rem;
+	color: white;
+}
+
+.danskonijn {
+	display: none;
+	background: white;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.danskonijn.actief {
+	display: flex;
+}
+
+.danskonijn h2 {
+	color: #8D2840;
+}
+
+.danskonijn p {
+	animation-name: vergroten;
+	animation-duration: 1s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	color: #8D2840; 
+}
+
+@keyframes vergroten {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.danskonijn div {
+	display: none;
+}
+.danskonijn div i {
+	font-size: 4rem;
+}
+
+.danskonijn div.actief {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@media (min-width: 800px) {
+	.tabbladen {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.tabbladen li {
+		margin-right: 2rem;
+		margin-bottom: 0;
+	}
+
+  .intro h1, .profiel h1 {
+    font-size: 6rem;
+    line-height: 6rem;
+  }
+
+	.profiel {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+	}
+
+	.profiel .links {
+		text-align: left;
+		margin: 0;
+	}
+
+	.profiel img {
+		width: 80%;
+	}
+
+  header, main {
+    padding: 3rem 6rem;
+  }
+
+	.kolomweergave {
+		column-count: 2;
+		column-gap: 5vw;
+	}
+
+  .kolomweergave a {
+    margin-bottom: 5vw;
+  }
+
+  .menu {
+    top: 7.5rem;
+  	right: 6rem;
+  }
+
+  footer {
+    padding: 6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  footer a {
+      margin-right: 2rem;
+      display: inline-block;
+  }
+
+  footer .links {
+    padding-bottom: 0;
+  }
+
+  footer .rechts {
+    text-align: right;
+  }
+
+}
+
+@media (min-width: 1100px) {
+		form .kolommen {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		form .kolommen label {
+			width: 48%;
+		}
+
+		.menu {
+			display: none;
+		}
+
+		nav {
+			display: flex;
+			flex-direction: row;
+			position: absolute;
+			top: 7.5rem;
+			right: 6rem;
+		}
+
+		nav a {
+			margin-left: 2rem;
+		}
+
+    .kolomweergave {
+  		column-count: 3;
+  		column-gap: 5vw;
+  	}
+}
